@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Gabarito';
+    src: url('/public/Gabarito/Gabarito-VariableFont_wght.ttf') format('tff'), /* adjust path and file format */
+         url('/public/Gabarito/Gabarito-VariableFont_wght.ttf') format('ttf'); /* adjust path and file format */
+    /* Add additional src lines for other file formats if available */
+  }
+
+  * {
+    font-family: 'Gabarito', sans-serif !important;
+  }
+
+.banner {
+    background-image: url(/public/map.jpeg);
+    height: 80vh;
+    width: 100%;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    display: flex;
+}
+
+.banner::after {
+    content: '';
+    background: #000000e8; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82%;
+    margin-top: 74px;
+}
+
+.cards {
+    /* background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
+}
+
+.subcard {
+    background-color: #97c6f180
+}
