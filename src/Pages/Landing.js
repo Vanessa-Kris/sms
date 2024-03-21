@@ -214,7 +214,7 @@ export default function Landing() {
           <Grid item md={4} xs={12}>
             <Typography
               variant="h6"
-              sx={{ py: 3, px: 2, fontWeight: 600, color: "white" }}
+              sx={{ py: 3, px: 2, fontWeight: 600, color: "black" }}
             >
               Our Partners:
             </Typography>
