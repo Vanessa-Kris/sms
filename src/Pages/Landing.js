@@ -1,6 +1,8 @@
 import { Grid, Typography, Box, Button, Divider } from "@mui/material";
+import { hover } from "@testing-library/user-event/dist/hover";
 import React from "react";
 import { FaCircleArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
@@ -49,10 +51,12 @@ export default function Landing() {
                   </Typography>
                 </Grid>
                 <Grid item md={1} xs={6}>
-                  <FaCircleArrowRight
-                    size="28px"
-                    style={{ rotate: "-30deg" }}
-                  />
+                  <Link to="/about" style={{ color: "white", hover: "blue" }}>
+                    <FaCircleArrowRight
+                      size="28px"
+                      style={{ rotate: "-30deg" }}
+                    />
+                  </Link>
                 </Grid>
               </Grid>
             </Box>
@@ -264,8 +268,25 @@ export default function Landing() {
             </Button>
           </Grid>
 
-          <Grid item md={6} xs={12}>
-            <Typography variant="h6">Read more about our impact</Typography>
+          <Grid
+            item
+            md={6}
+            xs={12}
+            sx={{
+              bottom: 0,
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Typography variant="body1" sx={{ color: "black", px: 2 }}>
+              Read more about our impact{" "}
+            </Typography>
+            <Link to="/about#impact" style={{ color: "white", hover: "blue" }}>
+              <FaCircleArrowRight
+                size="18px"
+                style={{ rotate: "-30deg", marginTop: 2, color: "black" }}
+              />
+            </Link>
           </Grid>
         </Grid>
       </Box>

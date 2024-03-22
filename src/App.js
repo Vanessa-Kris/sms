@@ -1,9 +1,11 @@
 import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; //
 import Landing from "./Pages/Landing";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import About from "./Pages/About";
 
 const darkTheme = createTheme({
   palette: {
@@ -16,9 +18,14 @@ function App() {
     <>
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
-        <Nav />
-        <Landing />
-        <Footer />
+        <Router>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+          <Footer />
+        </Router>
       </ThemeProvider>
     </>
   );
